@@ -25,6 +25,7 @@
 #include <sys/sysmacros.h>
 #include <signal.h>
 #include "./garbage_collector.h"
+#include "./structures.h"
 
 typedef struct format_t
 {
@@ -32,6 +33,14 @@ typedef struct format_t
     void (*ptr)(va_list);
 } format_t;
 
+char **clean_array(char **arr);
+cell_t *init_cell(int index, int x, int y);
+void fill_nodes(storage_t *ret, char **arr, int state);
+storage_t *create_storage(char *buffer, char **arr, size_t sizet);
+void print_list(nodes_t *nodes);
+void add_node_back(nodes_t **nodes, int x, int y, int index);
+nodes_t *init_nodes(void);
+int error_handling(char **buffer, int state);
 void my_memset(char *buffer, char c, int number);
 int    my_putnbr_base(int nbr, char const *base);
 int    my_compute_power_rec(int nb, int p);

@@ -11,6 +11,8 @@ int my_getnbr(char const *str)
     int cursor = 0;
     int result = 0;
 
+    if (!str)
+        return (0);
     for (cursor = 0; str[cursor] == '-'; cursor += 1)
         nb_moins += 1;
     for (; str[cursor] && (str[cursor] >= '0' && str[cursor] <= '9'); \

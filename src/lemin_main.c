@@ -9,7 +9,12 @@
 
 int main(int ac, char *av[])
 {
-    (void)ac;
+    storage_t *storage = NULL;
     (void)av;
-    return (84);
+
+    if (ac != 1)
+        return (84);
+    storage = create_storage(NULL, NULL, 100);
+    if (!storage)
+        return (84);
 }

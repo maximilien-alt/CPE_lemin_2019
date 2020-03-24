@@ -63,9 +63,13 @@ SRC	=	lib/my/my_putnbr_base.c	\
 NAME	=	lem_in
 
 COMP	=	src/lemin_main.c	\
-			src/garbage_collector.c
+			src/nodes.c	\
+			src/garbage_collector.c	\
+			src/storage.c	\
+			src/storage_next.c	\
+			src/error_handling.c	\
 
-CFLAGS  =	-W -Wall -Wextra -Iinclude
+CFLAGS  =	-W -Wall -Wextra -Iinclude -g3
 
 OBJ	=	$(SRC:.c=.o)
 
