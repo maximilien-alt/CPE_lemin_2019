@@ -18,7 +18,22 @@ P1-3 --> The first ant move to the room number three.
         make
 ```
 ***To use it :***
-(There is some examples of files in the direcotry : ***"bonus/tests/"*** ; Do not hesitate to make you own files !)
   ```sh
         ./lem_in < [file]
+```
+
+### Example Map
+
+```
+3
+##start
+0 1 0
+##end
+1 13 0 #bedroom
+2 5 0
+# The next room is the kitchen
+3 9 0
+0-2
+2-3
+3-1
 ```
